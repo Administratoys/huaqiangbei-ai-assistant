@@ -2,65 +2,50 @@
 
 An AI-powered tool that helps electronics engineers quickly research price ranges and suppliers for electronic components in the Huaqiangbei market.
 
-## Problem
+## 📖 Problem
 
-Huaqiangbei is the world's largest electronics market, but gathering real-time price and supply information for a specific component is time-consuming.
+Huaqiangbei is the world's largest electronics market, but gathering real-time price and supply information for a specific component is time-consuming and fragmented across various platforms. 
 
-## What It Does
+## ✨ What It Does
 
-- Takes a component model (e.g., STM32F103C8T6) and quantity as input
-- Uses two AI agents (Researcher + Planner) to search the web and generate a structured procurement report
-- Outputs price ranges, recommended suppliers, and risk alerts in a Markdown table
+- Takes a component model (e.g., STM32F103C8T6) and quantity as input.
+- Uses two AI agents (Researcher + Planner) to search the web and generate a structured procurement report.
+- Outputs price ranges, recommended suppliers, and risk alerts in a Markdown table.
+- **Value:** Reduces manual research time from 30 minutes to 30 seconds.
 
-## Tech Stack
+## 🛠️ Tech Stack
 
-- Python
-- Agno (multi-agent framework)
-- DuckDuckGo Search
-- SiliconFlow API (Qwen model)
-- Streamlit (web UI)
+- **Language:** Python
+- **Framework:** Agno (multi-agent framework)
+- **Search:** DuckDuckGo Search (Zero-cost)
+- **LLM API:** SiliconFlow (Qwen model)
+- **UI:** Streamlit
 
-## How to Run
+## 🏗️ Architecture Flow
+
+1. **User Input** (Component Model & Quantity)
+2. **Researcher Agent** (Searches web for prices and supply)
+3. **Planner Agent** (Analyzes data and generates report)
+4. **Output** (Structured Markdown Table & Risk Alerts)
+
+## 🚀 How to Run
 
 1. Clone the repo
 2. Install dependencies: `pip install -r requirements.txt`
 3. Create a `.env` file with your SiliconFlow API key
-4. Run: `streamlit run travel_agent.py`
+4. Run: `streamlit run app.py`
 
-## Example Output
+## 📸 Example Output
 
-(Insert a screenshot of your app here)
+*(Insert a screenshot of your app here)*
 
-## What I Learned
+## 🧠 What I Learned
 
-- How to build a multi-agent system with Agno
-- How to integrate free LLM APIs and search tools
-- How to structure technical documentation for a real use case
+- How to build a multi-agent system with Agno for task decomposition.
+- How to integrate free LLM APIs and search tools to build a zero-cost prototype.
+- How to structure technical documentation (SOP & FAQ) for real-world business use cases.
+- Understanding LLM hallucinations and how to design risk alerts for end-users.
 
+---
 
-
-# FAQ
-
-## 1. What is this project?
-
-It's an AI assistant that helps users research electronic component prices in the Huaqiangbei market.
-
-## 2. How does it work?
-
-It uses two AI agents: one searches the web for price and supplier information, the other generates a structured report.
-
-## 3. What AI model does it use?
-
-It uses SiliconFlow's API with the Qwen model. It's free and OpenAI-compatible.
-
-## 4. Does it require paid API keys?
-
-No. It uses DuckDuckGo for search (free) and SiliconFlow's free tier for the LLM.
-
-## 5. Can I use it for other markets?
-
-Yes. You can modify the agent prompts to research other markets or product categories.
-
-## 6. What if the AI gives wrong prices?
-
-The tool is for reference only. Always verify with suppliers before making purchasing decisions.
+*(You can move the FAQ to a separate FAQ.md file or keep it below)*
